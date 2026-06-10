@@ -1,0 +1,282 @@
+/* SV.css - Schedule View styles */
+
+/* ========== HEADER STYLES ========== */
+
+.header-svc {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #555555;
+    color: white;
+    box-sizing: border-box;
+}
+
+.block-schedulec {
+    display: flex;
+    width: 100vw;
+}
+
+header h2 {
+    margin: 0;
+}
+
+/* ========== BUTTON STYLES ========== */
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #aaaaaa;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* ========== CLIENTS SIDEBAR ========== */
+
+.clients-headerc {
+    margin-top: 1vw;
+    width: 15vw;
+    height: 35.6vw;
+    border-radius: 4px;
+    margin-left: 15px;
+    border-right: #45a049 4px solid;
+}
+
+.clients-headerc h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.clients-headerc input {
+    width: 13.8vw;
+    padding: 5px;
+    margin-left: 1px;
+    margin-bottom: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.client-listc {
+    flex: 1;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    padding: 3px;
+    min-width: 14vw;
+    max-width: 14vw;
+    min-height: 20vw;
+    max-height: 20vw;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.client-itemc {
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    background-color: #dddddd;
+    cursor: grab;
+}
+
+.client-itemc:active {
+    cursor: grabbing;
+}
+
+.client-itemc:last-child {
+    border-bottom: none;
+    min-width: 13.5vw;
+}
+
+/* ========== SCHEDULE CONTAINER ========== */
+
+.schedule-containerc {
+    display: flex;
+    gap: 5px;
+    margin-top: 12px;
+}
+
+/* ========== SCHEDULE DAY BLOCKS ========== */
+
+.schedule-blockc {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    padding: 5px;
+    margin: 5px;
+    min-width: 16vw;
+    min-height: 35vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.schedule-blocks-viewerc {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    padding: 0px;
+    margin-bottom: 0px;
+    min-width: 19.7vw;
+    min-height: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.schedule-blockc h4 {
+    margin: 0 0 0px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.schedule-blocks-viewerc h4 {
+    margin: 0 0 0px 0;
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+}
+
+/* ========== EDIT BUTTON ========== */
+
+.edit-but {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.edit-but button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+}
+
+.edit-but button:hover {
+    color: #000;
+}
+
+.schedule-blockc div:last-child {
+    margin-bottom: -10px;
+}
+
+/* ========== MODAL STYLES ========== */
+
+.modalc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-contentc {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.modalc button {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.modal-contentc h2 {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+}
+
+.modal-contentc label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.modal-contentc input[type="time"] {
+    width: calc(100% - 10px);
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-actionsc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-actionsc button {
+    flex: 1;
+    margin: 0 5px;
+}
+
+/* ========== SCHEDULE ENTRY CARDS ========== */
+
+.schedule-itemc {
+    position: relative;
+    padding: 15px;
+    min-width: 13.5vw;
+    max-width: 13.5vw;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.clients-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0px;
+    margin-bottom: -5px;
+}
+
+.clients-list li {
+    margin-top: 2px;
+}
+
+/* ========== FREE TIME BLOCKS ========== */
+
+.free-time-block {
+    background-color: lightgreen;
+    margin-left: 10px;
+    gap: 10px;
+    border: 1px solid green;
+    border-radius: 5px;
+    width: 93%;
+}
+
+.schedule-itemc-vw {
+    position: relative;
+    padding: 5px;
+    min-width: 16.5vw;
+    max-width: 16.5vw;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-bottom: 0px;
+}

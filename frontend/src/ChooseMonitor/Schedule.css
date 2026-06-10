@@ -1,0 +1,270 @@
+/* Schedule.css - Schedule search and selection styles */
+
+/* ========== GLOBAL STYLES ========== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e8f1f5, #ffffff);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========== MAIN CONTAINER ========== */
+
+.schedule-container {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* ========== HEADER STYLES ========== */
+
+.schedule-header {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.schedule-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.schedule-header p {
+    font-size: 14px;
+    color: #666;
+    margin: 8px 0 0;
+}
+
+/* ========== FILTERS SECTION ========== */
+
+.schedule-filters {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.filter-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.filter-group input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #007bff;
+}
+
+/* ========== SEARCH INPUT ========== */
+
+.filter-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fafafa;
+}
+
+.filter-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    outline: none;
+    background-color: white;
+}
+
+.filter-input::placeholder {
+    color: #aaa;
+}
+
+/* ========== ENTITY LIST ========== */
+
+.entity-lists {
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f5f7fa;
+    padding: 12px;
+    width: 100%;
+}
+
+/* Scrollbar styling */
+.entity-lists::-webkit-scrollbar {
+    width: 6px;
+}
+
+.entity-lists::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 3px;
+}
+
+.entity-lists::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.entity-lists::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ========== ENTITY ITEMS ========== */
+
+.entity-item {
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.entity-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f0f4ff;
+    border-color: #007bff;
+}
+
+.entity-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Clicked state (if used) */
+.entity-item.clicked {
+    background-color: #e3f2fd;
+    border-color: #007bff;
+}
+
+/* ========== NO RESULTS MESSAGE ========== */
+
+.no-results {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    font-size: 14px;
+}
+
+/* ========== BACK BUTTON ========== */
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px);
+}
+
+.back-button:active {
+    transform: translateY(0);
+}
+
+/* ========== ANIMATIONS ========== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 480px) {
+    .schedule-container {
+        padding: 20px;
+        margin-top: 2vh;
+        width: 95%;
+    }
+
+    .schedule-header h1 {
+        font-size: 20px;
+    }
+
+    .filter-group {
+        gap: 15px;
+    }
+
+    .filter-group label {
+        font-size: 13px;
+    }
+
+    .filter-input {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .entity-item {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .back-button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+}
+
+/* ========== ACCESSIBILITY ========== */
+
+.filter-input:focus-visible,
+.back-button:focus-visible,
+.entity-item:focus-visible {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.entity-item:focus-visible {
+    background-color: #f0f4ff;
+}

@@ -1,0 +1,32 @@
+```json
+{
+  "name": "schedule-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Schedule Management System",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "db:reset": "cross-env DB_MODE=reset node app.js",
+    "db:init": "cross-env DB_MODE=reset node app.js"
+  },
+  "keywords": ["schedule", "express", "postgresql", "jwt"],
+  "author": "RobotanKE",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.10.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "cross-env": "^7.0.3"
+  }
+}

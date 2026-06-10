@@ -1,0 +1,143 @@
+/* loginCSS.css - Authentication styles for Schedule Management System */
+
+/* ========== GLOBAL STYLES ========== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* ========== LOGIN CONTAINER ========== */
+
+.login-container {
+    background: white;
+    padding: 32px 28px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+    width: 360px;
+    max-width: 90%;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Login heading */
+.login-container h2 {
+    margin-bottom: 24px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* ========== INPUT FIELDS ========== */
+
+.input-container {
+    margin-bottom: 16px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fafafa;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background-color: white;
+}
+
+input::placeholder {
+    color: #aaa;
+    font-weight: 400;
+}
+
+/* ========== LOGIN BUTTON ========== */
+
+.button-lg {
+    padding: 12px 15px;
+    margin-top: 8px;
+    width: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-lg:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.button-lg:active {
+    transform: translateY(0);
+}
+
+.button-lg:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+/* ========== ANIMATIONS ========== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 24px 20px;
+        width: 85%;
+    }
+
+    .login-container h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .button-lg {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
+
+/* ========== ACCESSIBILITY ========== */
+
+.button-lg:focus-visible,
+input:focus-visible {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
