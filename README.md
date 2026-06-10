@@ -88,7 +88,7 @@ A full-stack web application for managing client-specialist schedules with role-
 
 ```bash
 
-git clone https://github.com/yourusername/schedule-management-system.git
+git clone https://github.com/RobotanKE/schedule-management-system.git
 
 cd schedule-management-system
 
